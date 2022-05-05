@@ -19,7 +19,7 @@ var expiration_time = time.Now().Add(720 * time.Hour)
 
 func GenerateJWT(user *User) (string, error) {
 	// JWT Key is the user's password
-	jwt_key := user.Password
+	jwt_key := []byte(user.Password)
 	// Create the JWT claims, which includes the username and expiry time
 	claims := new(Claims)
 	claims.Username= user.Username

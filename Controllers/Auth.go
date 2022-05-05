@@ -13,7 +13,7 @@ type User struct {
 	Token string `json:"token"`
 }
 
-func CreateUser(ctx* fiber.Ctx) error {
+func CreateUser(ctx *fiber.Ctx) error {
 	// Create a new user object for later population
 	user := new(User)
 
@@ -43,7 +43,7 @@ func CreateUser(ctx* fiber.Ctx) error {
 
 }
 
-func LoginUser(ctx* fiber.Ctx) error {
+func LoginUser(ctx *fiber.Ctx) error {
 	// Create a new user object for later population
 	user := new(User)
 
